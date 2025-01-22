@@ -5,17 +5,17 @@ public class Main {
         printThreeWords();
         checkSumSign();
         printColor();
-        cmpareNumbers();
-        checkSumRange(1, 19);
+        compareNumbers();
+        System.out.println(checkSumRange(1, 19));
         checkPositivNumb(-4);
-        checkPositivNumbRet(-4);
+        System.out.println(checkPositivNumbRet(-4));
         printText("Help", 7);
-        checkLeapYear(2004);
+        System.out.println(checkLeapYear(2004));
         arreyCorrection();
         createArrey();
         myltiplyBySix();
         arreyMarkX();
-        createArreyByOrder(5,4);
+        createArreyByOrder(5, 4);
 
 
     }
@@ -48,7 +48,7 @@ public class Main {
         }
     }
 
-    public static void cmpareNumbers() {
+    public static void compareNumbers() {
         int a = 1;
         int b = 1;
         if (a >= b) {
@@ -60,10 +60,7 @@ public class Main {
 
     public static boolean checkSumRange(int a, int b) {
         int sum = a + b;
-        if ((10 <= sum) & (sum <= 20)) {
-            return true;
-
-        } else return false;
+        return ((10 <= sum) & (sum <= 20));
     }
 
     public static void checkPositivNumb(int a) {
@@ -73,9 +70,7 @@ public class Main {
     }
 
     public static boolean checkPositivNumbRet(int a) {
-        if (a < 0) {
-            return true;
-        } else return false;
+        return a < 0;
     }
 
     public static void printText(String a, int b) {
@@ -85,9 +80,7 @@ public class Main {
     }
 
     public static boolean checkLeapYear(int a) {
-        if (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0)) {
-            return true;
-        } else return false;
+        return (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0));
     }
 
     public static void arreyCorrection() {
@@ -97,17 +90,18 @@ public class Main {
             if (array[i] == 0) {
                 array[i] = 1;
             } else array[i] = 0;
-
-
+            System.out.print(array[i] + " ");
         }
+        System.out.println();
     }
 
     public static void createArrey() {
         int[] arr = new int[100];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
+            System.out.print(arr[i] + " ");
         }
-
+        System.out.println();
     }
 
     public static void myltiplyBySix() {
@@ -116,7 +110,9 @@ public class Main {
             if (arr[i] < 6) {
                 arr[i] = arr[i] * 2;
             }
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public static void arreyMarkX() {
@@ -132,12 +128,19 @@ public class Main {
                 }
             }
         }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static int[] createArreyByOrder(int len, int initialValue) {
         int[] arrey = new int[len];
         for (int i = 0; i < len; i++) {
             arrey[i] = initialValue;
+            System.out.print(arrey[i]);
         }
         return arrey;
     }
