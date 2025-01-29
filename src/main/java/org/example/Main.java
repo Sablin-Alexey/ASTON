@@ -21,6 +21,7 @@ public class Main {
         bowl = val;
         System.out.println("насыпал корм в миску, сейчас в ней " + bowl + " корма");
     }
+
     public static void main(String[] args) {
         feed(100);
         Animals dog = new Dog("бобик");
@@ -46,14 +47,17 @@ public class Main {
                 "Создано Собак " + numbOfDog + '\n' +
                 "Создано Кошек " + numbOfCat + '\n');
 
-        Square square = new Square("sqare1","green", "blue", 3);
-        Circle circle = new Circle("circle1","red", "black", 6);
-        Triangle triangle = new Triangle("triangle1","white", "red", 4,5,6);
+        Square square = new Square("sqare1", "green", "blue", 3);
+        Circle circle = new Circle("circle1", "red", "black", 6);
+        Triangle triangle = new Triangle("triangle1", "white", "red", 4, 5, 6);
         square.square();
         square.perimeter();
         circle.perimeter();
         circle.square();
         triangle.perimeter();
         triangle.square();
+        System.out.println(square);
+        System.out.println(circle);
+        System.out.println(triangle);
     }
 }

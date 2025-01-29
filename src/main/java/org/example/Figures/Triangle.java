@@ -2,7 +2,7 @@ package org.example.Figures;
 
 import static java.lang.Math.sqrt;
 
-public class Triangle implements Figure{
+public class Triangle implements Figure {
     String name;
     String borderColor;
     String fillColor;
@@ -18,16 +18,23 @@ public class Triangle implements Figure{
         this.sizeA = sizeA;
         this.sizeB = sizeB;
         this.sizeC = sizeC;
-        perim = sizeA+sizeB+sizeC;
+        perim = sizeA + sizeB + sizeC;
     }
 
     @Override
     public void square() {
-        System.out.println("Площать треугольника "+ this.name+ " "+ sqrt(perim*(perim-sizeA)*(perim-sizeB)*(perim-sizeC)));
+        System.out.println("Площать треугольника " + this.name + " " + sqrt(perim * (perim - sizeA) * (perim - sizeB) * (perim - sizeC)));
     }
 
     @Override
     public void perimeter() {
-        System.out.println("Перимет треугольника "+ this.name + " "+ perim);
+        System.out.println("Перимет треугольника " + this.name + " " + perim);
+    }
+
+    @Override
+    public String toString() {
+        return "Треугольник " + name + '\n' +
+                "Цвет границ " + borderColor + '\n' +
+                "Цвет заливки " + fillColor + '\n';
     }
 }

@@ -16,10 +16,18 @@ public class Square implements Figure {
 
     @Override
     public void square() {
-        System.out.println("Площать квадрата "+ this.name+ " "+ size*size);    }
+        System.out.println("Площать квадрата " + this.name + " " + size * size);
+    }
 
     @Override
     public void perimeter() {
-        System.out.println("Периметр  квадрата "+ this.name+ " "+ size*4);
+        System.out.println("Периметр  квадрата " + this.name + " " + size * 4);
+    }
+
+    @Override
+    public String toString() {
+        return   "Квадрат " + name + '\n' +
+                "Цвет границ " + borderColor + '\n' +
+                "Цвет заливки " + fillColor + '\n';
     }
 }

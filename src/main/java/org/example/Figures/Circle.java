@@ -15,11 +15,18 @@ public class Circle implements Figure {
 
     @Override
     public void square() {
-        System.out.println("Площать круга "+ this.name+ " "+ 3.14*radius*radius);
+        System.out.println("Площать круга " + this.name + " " + 3.14 * radius * radius);
     }
 
     @Override
     public void perimeter() {
-        System.out.println("Длинна окружности круга "+ this.name+ " "+ 3.14*radius*2);
+        System.out.println("Длинна окружности круга " + this.name + " " + 3.14 * radius * 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Круг " + name + '\n' +
+                "Цвет границ " + borderColor + '\n' +
+                "Цвет заливки " + fillColor + '\n';
     }
 }
