@@ -21,6 +21,6 @@ public class Converter {
                 }
             }
         }
-        System.out.println("Сумма всех элементов " + sum);
+        System.out.println("Сумма всех элементов массива" + sum);
     }
 }
